@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>y</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>y</title>
+  <link rel="stylesheet" href="./screen.css">
+</head>
+
+<body ng-app= "lastfmApp" ng-controller="mainController">
+  <h1>Top 50 Hits from last.fm</h1>
+  <section
+    ng-repeat ="artist in artists track by $index">
+   {{artist.name}}
+  
+  </section>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
+
 </html>
